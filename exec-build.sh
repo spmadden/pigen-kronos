@@ -2,7 +2,7 @@
 
 apt-get install coreutils quilt parted qemu-user-static debootstrap zerofree zip \
 dosfstools libarchive-tools libcap2-bin grep rsync xz-utils file git curl bc \
-gpg pigz xxd arch-test bmap-tools
+gpg pigz xxd arch-test bmap-tools binfmt-support
 
 IMG_NAME="raspkronos-$RELEASE-$ARCH"
 PI_GEN_RELEASE='Raspberry Kronos arm64 base'
@@ -18,6 +18,6 @@ WPA_COUNTRY='US'
 ENABLE_SSH=1
 PUBKEY_SSH_FIRST_USER=$(<authorized_keys)
 STAGE_LIST='stage0'
-USE_QEMU=1
+USE_QEMU=0
 
 ./build.sh
